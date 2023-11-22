@@ -1,5 +1,5 @@
 const app = require("./app.js")
-
+const cors =  require ("cors");
 const connectdb=require("../backend/config/database.js")
 const cloudinary = require("cloudinary");
 process.on("uncaughtException",(err)=>{
@@ -8,6 +8,11 @@ process.on("uncaughtException",(err)=>{
     process.exit(1);
 })
 
+app.use(cors({
+    origin:['https://ad-hub-frontend-995v-qw74zjqj5-niladrimodak.vercel.app',"http://localhost:3000"],
+    credentials:true,
+    optionSuccessStatus: 200,
+}))
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
     require("dotenv").config({ path: "backend/secret.env" });
