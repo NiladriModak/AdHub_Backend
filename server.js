@@ -12,7 +12,8 @@ const express = require("express");
 // })
 
 app.use(cors({
-    origin:['https://ad-hub-frontend-995v.vercel.app/'],
+    origin:['https://ad-hub-frontend-995v.vercel.app','http://localhost:3000'],
+    methods:["GET","POST","PUT","DELETE"],
     credentials:true,
     optionSuccessStatus: 200,
 }))
