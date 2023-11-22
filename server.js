@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 
 // if (process.env.NODE_ENV !== "PRODUCTION") {
-//     require("dotenv").config({ path: "secret.env" });
+    // require("dotenv").config({ path: "secret.env" });
 //   }
 connectdb();
 cloudinary.config({
@@ -40,9 +40,9 @@ const server = app.listen('5000',()=>{
 
 
 
-app.all("/", (res) => {
-    res.send({ message: "API is Up and Running on render 😎🚀" });
-  });
+// app.all("/", (res) => {
+//     res.send({ message: "API is Up and Running on render 😎🚀" });
+//   });
 
 //unhandled rejections
 // process.on("unhandledRejection",(err)=>{
