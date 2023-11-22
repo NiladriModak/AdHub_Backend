@@ -28,6 +28,10 @@ const server = app.listen('5000',()=>{
     console.log("Server is working ");
 })
 
+app.all("/", (req, res, next) => {
+    res.send({ message: "API is Up and Running on render 😎🚀" });
+  });
+
 //unhandled rejections
 process.on("unhandledRejection",(err)=>{
     console.log(`Error : ${err.message} `);
