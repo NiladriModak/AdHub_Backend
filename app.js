@@ -1,5 +1,5 @@
 const express =require ("express");
-const errorMiddlewear=require("../backend/middlewares/error")
+const errorMiddlewear=require("../middlewares/error")
 const app=express();
 const cookieParser=require("cookie-parser")
 const bodyParser = require('body-parser')
@@ -7,7 +7,7 @@ const fileupload=require('express-fileupload')
 const path = require("path");
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({ path: "backend/secret.env" });
+    require("dotenv").config({ path: "secret.env" });
   }
 
 app.use(express.json());
