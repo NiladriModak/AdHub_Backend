@@ -24,7 +24,7 @@ cloudinary.config({
     api_secret:"0dlZUeXVVZkU45-quw4wLmG2ixc",
 })
 
-const server = app.listen('mongodb+srv://nila_boy:nila_boy@cluster0.ssn1p3g.mongodb.net/AdHub?retryWrites=true&w=majority',()=>{
+const server = app.listen('5000',()=>{
     console.log("Server is working ");
 })
 
