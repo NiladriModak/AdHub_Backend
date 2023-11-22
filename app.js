@@ -6,9 +6,6 @@ const bodyParser = require('body-parser')
 const fileupload=require('express-fileupload')
 const path = require("path");
 
-if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({ path: "secret.env" });
-  }
 
 app.use(express.json());
 app.use(cookieParser());
@@ -30,11 +27,6 @@ const order=require("./routes/orderRoutes");
 app.use(order);
 
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-});
 
 app.use(errorMiddlewear)
 module.exports = app;

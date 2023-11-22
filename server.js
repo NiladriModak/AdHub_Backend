@@ -40,7 +40,7 @@ cloudinary.config({
 
 
 
-app.all("/", (req, res, next) => {
+app.all("/", (res) => {
     res.send({ message: "API is Up and Running on render 😎🚀" });
   });
 
