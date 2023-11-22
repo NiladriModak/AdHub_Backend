@@ -1,5 +1,5 @@
 const express =require ("express");
-const errorMiddlewear=require("../middlewares/error")
+const errorMiddlewear=require("./middlewares/error")
 const app=express();
 const cookieParser=require("cookie-parser")
 const bodyParser = require('body-parser')

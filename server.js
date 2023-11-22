@@ -1,6 +1,6 @@
 const app = require("./app.js")
 const cors =  require ("cors");
-const connectdb=require("../config/database.js")
+const connectdb=require("./config/database.js")
 const cloudinary = require("cloudinary");
 process.on("uncaughtException",(err)=>{
     console.log(`Error : ${err.message}`);
@@ -15,7 +15,7 @@ app.use(cors({
 }))
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({ path: "backend/secret.env" });
+    require("dotenv").config({ path: "secret.env" });
   }
 connectdb();
 cloudinary.config({
