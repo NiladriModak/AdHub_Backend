@@ -34,9 +34,9 @@ cloudinary.config({
     api_secret:"0dlZUeXVVZkU45-quw4wLmG2ixc",
 })
 
-// const server = app.listen('5000',()=>{
-//     console.log("Server is working ");
-// })
+const server = app.listen('5000',()=>{
+    console.log("Server is working ");
+})
 
 
 
