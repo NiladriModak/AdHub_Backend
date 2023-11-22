@@ -40,9 +40,9 @@ const server = app.listen('5000',()=>{
 
 
 
-// app.all("/", (res) => {
-//     res.send({ message: "API is Up and Running on render 😎🚀" });
-//   });
+app.all("/", (res) => {
+    res.send({ message: "API is Up and Running on render 😎🚀" });
+  });
 
 //unhandled rejections
 // process.on("unhandledRejection",(err)=>{
