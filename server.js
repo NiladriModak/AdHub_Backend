@@ -17,15 +17,13 @@ app.use(cors({
     credentials:true,
     optionSuccessStatus: 200,
 }))
-app.use((req, res, next) => {
-    // Set CORS headers here
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-  
-    // Continue to the next middleware or route handler
+
+app.use(function (request, response, next) {
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
+
 app.use(helmet());
 app.set("trust proxy", 1);
 app.use(express.json());
