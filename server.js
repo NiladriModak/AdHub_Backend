@@ -18,6 +18,13 @@ app.use(cors({
     optionSuccessStatus: 200,
 }))
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://ad-hub-frontend-995v.vercel.app');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  });
+
 
 app.use(helmet());
 app.set("trust proxy", 1);
@@ -34,6 +41,8 @@ cloudinary.config({
     api_key:241217624559331,
     api_secret:"0dlZUeXVVZkU45-quw4wLmG2ixc",
 })
+
+
 
 const server = app.listen('5000',()=>{
     console.log("Server is working ");
