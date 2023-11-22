@@ -24,8 +24,8 @@ cloudinary.config({
     api_secret:"0dlZUeXVVZkU45-quw4wLmG2ixc",
 })
 
-const server = app.listen(process.env.PORT,()=>{
-    console.log("Server is working on",process.env.PORT);
+const server = app.listen('mongodb+srv://nila_boy:nila_boy@cluster0.ssn1p3g.mongodb.net/AdHub?retryWrites=true&w=majority',()=>{
+    console.log("Server is working ");
 })
 
 //unhandled rejections
