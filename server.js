@@ -46,5 +46,5 @@ cloudinary.config({
 });
 
 const server = app.listen("80", () => {
-  console.log("Server is working ", process.env.PORT);
+  console.log("Server is working ");
 });
