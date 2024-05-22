@@ -12,7 +12,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://ad-hub-frontend-wine.vercel.app"],
     credentials: true,
   })
 );
